@@ -16,5 +16,12 @@ public class Client {
 
         thread1.start();
 
+         int number = 252;
+
+         for(int i = 1; i <= number; i++){
+
+             Thread thread2 = new Thread(new NumberPrinter(i));
+             thread2.start();
+         }
     }
 }
