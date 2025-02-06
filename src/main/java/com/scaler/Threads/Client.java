@@ -10,5 +10,11 @@ public class Client {
 
         thread.start();
 
+        Runnable addAndPrintNSum = new NSum(252);
+
+        Thread thread1 = new Thread(addAndPrintNSum);
+
+        thread1.start();
+
     }
 }
