@@ -1,5 +1,8 @@
 package com.scaler.Threads;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Client {
 
     public static void main(String[] args) {
@@ -22,6 +25,13 @@ public class Client {
 
              Thread thread2 = new Thread(new NumberPrinter(i));
              thread2.start();
+         }
+
+         ExecutorService executorService = Executors.newFixedThreadPool(5);
+
+         for(int i = 1; i <= number; i++){
+
+             executorService.execute(new Thread(new NumberPrinter(i)));
          }
     }
 }
