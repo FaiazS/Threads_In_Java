@@ -1,11 +1,13 @@
 package com.scaler.Threads;
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class Client {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException{
 
         Runnable addAndPrintSum = new PrintSum();
 
@@ -33,5 +35,12 @@ public class Client {
 
              executorService.execute(new Thread(new NumberPrinter(i)));
          }
+
+         ExecutorService fibonacciExecutorService = Executors.newCachedThreadPool();
+
+         Future<Integer> finalFibonacciNum = fibonacciExecutorService.submit(new NthFibonacciNumber(25, fibonacciExecutorService));
+
+         System.out.println("Fibonacci Output : " +  finalFibonacciNum.get());
+
     }
 }
