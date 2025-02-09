@@ -1,4 +1,4 @@
-package com.scaler.Threads;
+package com.scaler.JavaMultiThreadingAndConcurrency1;
 
 public class NSum implements Runnable {
 

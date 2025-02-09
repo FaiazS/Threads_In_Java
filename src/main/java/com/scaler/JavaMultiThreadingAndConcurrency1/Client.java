@@ -1,4 +1,4 @@
-package com.scaler.Threads;
+package com.scaler.JavaMultiThreadingAndConcurrency1;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
