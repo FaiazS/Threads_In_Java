@@ -16,6 +16,9 @@ public class Adder implements Callable<Void> {
 
     }
 
+    public Adder(com.scaler.JavaMultiThreadingAndConcurrency2.Value value) {
+    }
+
     @Override
     public Void call() throws Exception {
 

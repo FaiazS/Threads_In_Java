@@ -8,10 +8,10 @@ public class Subtractor implements Callable<Void> {
     Value value;
     Lock lock;
 
-    public Subtractor(Value value) {
+    public Subtractor(Value value, Lock lock) {
 
         this.value = value;
-        this.lock = lock;
+        this.lock = this.lock;
 
     }
 
